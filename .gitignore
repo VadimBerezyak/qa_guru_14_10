@@ -38,8 +38,6 @@ target/
 .project
 .settings/org.eclipse.buildship.core.prefs
 .vscode
-/gradlew
-/gradlew.bat
 Footer
 © 2022 GitHub, Inc.
 Footer navigation
