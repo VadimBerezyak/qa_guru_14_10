@@ -13,5 +13,5 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '11'
-      # запускаем тесты
+      # запускаем тесты в гитхаб
       - run: ./gradlew clean test
