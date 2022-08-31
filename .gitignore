@@ -1,44 +1,40 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Properties files
-*.properties
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-*.iml
-
-# Project gen files
 .gradle
-.idea
-.allure/
-allure-results/
 build/
-bin/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
 out/
-logs/
-target/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
 .classpath
+.factorypath
 .project
-.settings/org.eclipse.buildship.core.prefs
-.vscode
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+/.idea/
