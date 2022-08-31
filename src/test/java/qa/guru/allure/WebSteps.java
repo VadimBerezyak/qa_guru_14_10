@@ -16,36 +16,36 @@ import static org.openqa.selenium.By.linkText;
 public class WebSteps {
 
     @Step("Открываем главную страницу")
-    public void openMainPage(){
+    public void openMainPage() {
         open("https://github.com");
     }
 
     @Step("Ищем репозиторий {repo}")
-    public void searchForRepository(String  repo){
+    public void searchForRepository(String repo) {
         $(".header-search-input").click();
         $(".header-search-input").setValue(repo);
         $(".header-search-input").pressEnter();
     }
 
     @Step("Кликаем по ссылке репозитория {repo}")
-    public void clickOnRepositoryLink(String  repo) {
+    public void clickOnRepositoryLink(String repo) {
         $(linkText(repo)).click();
     }
 
     @Step("Открываем таб Issues")
-    public void openIssueTab(){
+    public void openIssueTab() {
         $("#issues-tab").click();
     }
 
     @Step("Проверяем наличие issue c номером {issue}")
-    public void shouldSeeIssueWithNumber(int issue){
-        $(withText("#" + issue)).should(Condition.exist);
-    }
-    @Attachment(value = "Screenshot", type = "img", fileExtension = "png")
-    public byte[] takeScreenshot(){
-       return((TakesScreenshot)WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    public void shouldSeeIssueWithNumber(String issue) {
+        $("#issue_80_link").shouldHave(Condition.text(issue));
     }
 
+    @Attachment(value = "Screenshot", type = "img", fileExtension = "png")
+    public byte[] takeScreenshot() {
+        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    }
 
 
 }

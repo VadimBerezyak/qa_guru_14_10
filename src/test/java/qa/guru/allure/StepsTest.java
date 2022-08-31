@@ -13,7 +13,7 @@ import static org.openqa.selenium.By.linkText;
 
 public class StepsTest {
     private static final String REPOSITORY = "eroshenkoam/allure-example";
-    private static final int ISSUE = 80;
+    private static final String ISSUE = "e.sh";
 
     @Test
     public void testLambaSteps() {
@@ -32,8 +32,9 @@ public class StepsTest {
         step("Открываем таб Issues", () -> {
             $("#issues-tab").click();
         });
-        step("Проверяем наличие issue c номером" + ISSUE, () -> {
-            $(withText("#" + ISSUE)).should(Condition.exist);
+        step("Проверяем наличие issue c названием" + ISSUE, () -> {
+            $("#issue_80_link").shouldHave(Condition.text("e.sh"));
+
         });
 
 
