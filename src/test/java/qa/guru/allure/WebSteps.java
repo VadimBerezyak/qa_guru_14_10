@@ -4,11 +4,9 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
@@ -38,7 +36,7 @@ public class WebSteps {
     }
 
     @Step("Проверяем наличие issue c номером {issue}")
-    public void shouldSeeIssueWithNumber(String issue) {
+    public void issueShouldHaveName(String issue) {
         $("#issue_80_link").shouldHave(Condition.text(issue));
     }
 
