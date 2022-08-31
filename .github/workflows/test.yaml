@@ -13,6 +13,7 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '11'
+      - uses: Xotabu4/selenoid-github-action@v2
       # запускаем тесты в гитхаб
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
