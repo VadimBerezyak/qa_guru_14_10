@@ -14,4 +14,6 @@ jobs:
           distribution: 'zulu'
           java-version: '11'
       # запускаем тесты в гитхаб
+      - name: Change wrapper permissions
+      - run: chmod +x ./gradlew
       - run: chmod +x ./gradlew
