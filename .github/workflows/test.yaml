@@ -16,4 +16,4 @@ jobs:
       # запускаем тесты в гитхаб
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
-      - run: ./gradlew clean test
+      - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
